@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pomodoro Timer</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        #timer {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        
+        #startButton, #pauseButton {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        
+        #pauseButton {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pomodoro Timer</h1>
+    <div id="timer">25:00</div>
+    <button id="startButton">Start</button>
+    <button id="pauseButton">Pause</button>
+
+    <script>
+        var timer;
+        var minutes = 25;
+        var seconds = 0;
+        var isPaused = false;
+
+        function startTimer() {
+            isPaused = false; // Setzt isPaused auf false, um den Timer zu starten
+            timer = setInterval(updateTimer, 1000);
+            document.getElementById("startButton").disabled = true;
+            document.getElementById("pauseButton").disabled = false;
+        }
+
+        function pauseTimer() {
+            clearInterval(timer);
+            isPaused = true;
+            document.getElementById("startButton").disabled = false;
+            document.getElementById("pauseButton").disabled = true;
+        }
+
+        function updateTimer() {
+            if (!isPaused) {
+                if (seconds === 0) {
+                    if (minutes === 0) {
+                        clearInterval(timer);
+                        alert("Zeit ist abgelaufen!");
+                        return;
+                    }
+                    minutes--;
+                    seconds = 59;
+                } else {
+                    seconds--;
+                }
+                document.getElementById("timer").innerHTML = formatTime(minutes) + ":" + formatTime(seconds);
+            }
+        }
+
+        function formatTime(time) {
+            return time < 10 ? "0" + time : time;
+        }
+
+        document.getElementById("startButton").addEventListener("click", startTimer);
+        document.getElementById("pauseButton").addEventListener("click", pauseTimer);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
