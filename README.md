@@ -20,8 +20,9 @@ https://www.youtube.com/channel/UCOV2NY68BManExN9CmOjZoA/community?lb=Ugkxp5wQBN
 https://www.youtube.com/channel/UCOV2NY68BManExN9CmOjZoA/community?lb=UgkxI5DYDAkGUIW07EMHQHDE30YXozJCOD1-
 https://www.youtube.com/channel/UCOV2NY68BManExN9CmOjZoA/community?lb=Ugkx_AlhRY0ioUGwhhaFlFAJCI88EW0xXvdU
 
-
-
+#
+https://chat.openai.com/share/1c24b98d-4dc1-4cc2-b435-8c8c1f047cfb
+https://chat.openai.com/share/39840d1e-87d8-43f5-bec1-e7752cabccf1
 
 
 
